@@ -1,0 +1,46 @@
+.main-container{
+    .visual-container{
+        position: relative;
+
+        .visual-text-box{
+            position: absolute;
+            top: 50%;
+            left: 200px;
+            transform: translateY(-50%);
+
+            & > p{
+                opacity: 0;
+                font-family: 'Pretendard-Medium';
+                font-size: 70px;
+                color: #fbf4e9;
+                letter-spacing: 4px;
+                line-height: 1.4;
+                transform: translateY(50px);
+                transition: 0.8s;
+
+                &.on{
+                    opacity: 1;
+                    transform: translateY(0px);
+                }
+
+                & > span{
+                    font-family: 'Pretendard-black';
+                    color: white;
+                }
+            }
+
+            .visual-text02{
+                font-family: 'Pretendard-black';
+                color: white;
+            }
+        }
+
+        .visual-bg{
+            width: 100%;
+            
+            & > img{
+                width: 100%;
+            }
+        }
+    }
+}
