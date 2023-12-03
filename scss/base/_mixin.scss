@@ -1,0 +1,28 @@
+@mixin title($color, $size: 35px){
+    font-family: 'Cormorant Garamond';
+    font-style: italic;
+    font-size: $size;
+    color: $color;
+    letter-spacing: 12px;
+    position: relative;
+
+    &:after{
+        content: "";
+        display: block;
+        width: 30px;
+        height: 1px;
+        background-color: $color;
+        position: absolute;
+        left: 50%;
+        bottom: -14px;
+        transform: translateX(-50%);
+    }
+}
+
+@mixin text($color, $size: 22px, $line: 1.5){
+    font-family: 'Pretendard-Medium';
+    font-size: $size;
+    color: $color;
+    text-align: center;
+    line-height: $line;
+}

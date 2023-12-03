@@ -14,7 +14,7 @@ menuIcon.addEventListener('click', function () {
 window.addEventListener('scroll', function(){
     const scrollY = window.scrollY;
     const innerWidth = window.innerWidth;
-    const headerContainer = this.document.querySelector('.header-container');
+    const headerContainer = document.querySelector('.header-container');
 
     if (scrollY > 0){
         innerWidth <= 768 ? '' : headerContainer.classList.add('on');

@@ -256,6 +256,128 @@ body, html {
 .main-container .visual-container .visual-bg > img {
   width: 100%;
 }
+.main-container .about-container {
+  padding: 150px 0px;
+  box-sizing: border-box;
+}
+.main-container .about-container > .title-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 50px;
+}
+.main-container .about-container > .title-wrapper .title {
+  font-family: "Cormorant Garamond";
+  font-style: italic;
+  font-size: 35px;
+  color: #d9c5b4;
+  letter-spacing: 12px;
+  position: relative;
+  opacity: 0;
+  transform: translateY(70px);
+  transition: 0.5s;
+}
+.main-container .about-container > .title-wrapper .title:after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 1px;
+  background-color: #d9c5b4;
+  position: absolute;
+  left: 50%;
+  bottom: -14px;
+  transform: translateX(-50%);
+}
+.main-container .about-container > .title-wrapper .title.on {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.main-container .about-container > .title-wrapper .text-box {
+  opacity: 0;
+  transform: translateY(70px);
+  transition: 0.5s;
+}
+.main-container .about-container > .title-wrapper .text-box.on {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.main-container .about-container > .title-wrapper .text-box > p {
+  font-family: "Pretendard-Medium";
+  font-size: 22px;
+  color: #555555;
+  text-align: center;
+  line-height: 1.5;
+}
+.main-container .about-container .profile-wrapper {
+  margin: 0px auto;
+  width: 800px;
+  height: 260px;
+  border: solid 1px #ece1d9;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  opacity: 0;
+  transform: translateY(70px);
+  transition: 0.5s;
+}
+.main-container .about-container .profile-wrapper.on {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.main-container .about-container .profile-wrapper .img-box {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  background-color: #f3f3f3;
+  position: relative;
+  overflow: hidden;
+}
+.main-container .about-container .profile-wrapper .img-box:hover > img:first-of-type {
+  display: none;
+}
+.main-container .about-container .profile-wrapper .img-box:hover > img:last-of-type {
+  display: block;
+}
+.main-container .about-container .profile-wrapper .img-box > img {
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-radius: 100px;
+}
+.main-container .about-container .profile-wrapper .img-box > img:last-of-type {
+  display: none;
+}
+.main-container .about-container .profile-wrapper .text-box {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.main-container .about-container .profile-wrapper .text-box .name {
+  font-family: "Pretendard-Light";
+  font-size: 20px;
+  color: #555555;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.main-container .about-container .profile-wrapper .text-box .name > img {
+  width: 30px;
+}
+.main-container .about-container .profile-wrapper .text-box > a {
+  font-family: "Pretendard-Light";
+  font-size: 20px;
+  color: #555555;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.main-container .about-container .profile-wrapper .text-box > a > img {
+  width: 30px;
+}
 
 @media screen and (max-width: 1920px) {
   .main-container .visual-container .visual-bg {
@@ -316,6 +438,39 @@ body, html {
   .main-container .visual-container .visual-bg {
     height: 480px;
   }
+  .main-container .about-container > .title-wrapper .text-box > p {
+    font-family: "Pretendard-Medium";
+    font-size: 18px;
+    color: #555555;
+    text-align: center;
+    line-height: 1.5;
+  }
+  .main-container .about-container .profile-wrapper {
+    width: 735px;
+    height: 225px;
+    gap: 70px;
+  }
+  .main-container .about-container .profile-wrapper .img-box {
+    width: 170px;
+    height: 170px;
+  }
+  .main-container .about-container .profile-wrapper .text-box {
+    gap: 12px;
+  }
+  .main-container .about-container .profile-wrapper .text-box .name {
+    font-size: 17px;
+    gap: 14px;
+  }
+  .main-container .about-container .profile-wrapper .text-box .name > img {
+    width: 26px;
+  }
+  .main-container .about-container .profile-wrapper .text-box > a {
+    font-size: 17px;
+    gap: 14px;
+  }
+  .main-container .about-container .profile-wrapper .text-box > a > img {
+    width: 26px;
+  }
 }
 @media screen and (max-width: 768px) {
   .header-container {
@@ -342,5 +497,64 @@ body, html {
   }
   .main-container .visual-container .visual-bg {
     height: 355px;
+  }
+  .main-container .about-container {
+    padding: 120px 0px;
+  }
+  .main-container .about-container > .title-wrapper {
+    gap: 40px;
+    margin-bottom: 34px;
+  }
+  .main-container .about-container > .title-wrapper .title {
+    font-family: "Cormorant Garamond";
+    font-style: italic;
+    font-size: 30px;
+    color: #d9c5b4;
+    letter-spacing: 12px;
+    position: relative;
+  }
+  .main-container .about-container > .title-wrapper .title:after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 1px;
+    background-color: #d9c5b4;
+    position: absolute;
+    left: 50%;
+    bottom: -14px;
+    transform: translateX(-50%);
+  }
+  .main-container .about-container > .title-wrapper .text-box {
+    width: 374px;
+  }
+  .main-container .about-container > .title-wrapper .text-box > p {
+    font-family: "Pretendard-Medium";
+    font-size: 16px;
+    color: #555555;
+    text-align: center;
+    line-height: 2;
+  }
+  .main-container .about-container .profile-wrapper {
+    width: 560px;
+    height: 210px;
+    gap: 40px;
+  }
+  .main-container .about-container .profile-wrapper .img-box {
+    width: 150px;
+    height: 150px;
+  }
+  .main-container .about-container .profile-wrapper .text-box .name {
+    font-family: "Pretendard-Regular";
+    font-size: 15px;
+  }
+  .main-container .about-container .profile-wrapper .text-box .name > img {
+    width: 22px;
+  }
+  .main-container .about-container .profile-wrapper .text-box > a {
+    font-family: "Pretendard-Regular";
+    font-size: 15px;
+  }
+  .main-container .about-container .profile-wrapper .text-box > a > img {
+    width: 22px;
   }
 }

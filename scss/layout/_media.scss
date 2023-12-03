@@ -87,6 +87,49 @@
                 height: 480px;
             }
         }
+
+        .about-container{
+            & > .title-wrapper{
+                .text-box{
+                    & > p{
+                        @include text($grayDark, 18px);
+                    }
+                }
+            }
+
+            .profile-wrapper{
+                width: 735px;
+                height: 225px;
+                gap: 70px;
+
+                .img-box{
+                    width: 170px;
+                    height: 170px;
+                }
+
+                .text-box{
+                    gap: 12px;
+                    
+                    .name{
+                        font-size: 17px;
+                        gap: 14px;
+
+                        & > img{
+                            width: 26px;
+                        }
+                    }
+
+                    & > a{
+                        font-size: 17px;
+                        gap: 14px;
+
+                        & > img{
+                            width: 26px;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -125,6 +168,58 @@
 
             .visual-bg{
                 height: 355px;
+            }
+        }
+
+        .about-container{
+            padding: 120px 0px;
+
+            & > .title-wrapper{
+                gap: 40px;
+                margin-bottom: 34px;
+
+                .title{
+                    @include title($brownLight, 30px);
+                }
+
+                .text-box{
+                    width: 374px;
+
+                    & > p{
+                        @include text($grayDark, 16px, 2);
+                    }
+                }
+            }
+
+            .profile-wrapper{
+                width: 560px;
+                height: 210px;
+                gap: 40px;
+
+                .img-box{
+                    width: 150px;
+                    height: 150px;
+                }
+
+                .text-box{
+                    .name{
+                        font-family: 'Pretendard-Regular';
+                        font-size: 15px;
+
+                        & > img{
+                            width: 22px;
+                        }
+                    }
+
+                    & > a{
+                        font-family: 'Pretendard-Regular';
+                        font-size: 15px;
+
+                        & > img{
+                            width: 22px;
+                        }
+                    }
+                }
             }
         }
     }
