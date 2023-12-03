@@ -104,7 +104,8 @@
 
 .header-container.on{
     position: fixed;
-    background-color: white;
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.5);
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
     
     .logo{
