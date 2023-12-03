@@ -5,5 +5,14 @@
 
 body, html{
     font-family: 'Pretendard-Regular';
-    height: 5000px;
+}
+
+.blind{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(1px, 1px, 1px, 1px);
+    overflow: hidden;
+    border: none;
+    z-index: -1;
 }

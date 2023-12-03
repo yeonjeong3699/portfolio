@@ -244,6 +244,22 @@
             }
         }
     }
+
+    .footer-container{
+        padding: 30px 40px;
+
+        .text-wrapper{
+            .title{
+                font-size: 22px;
+                margin-bottom: 8px;
+            }
+    
+            & > p{
+                font-size: 16px;
+                line-height: 1.5;
+            }
+        }
+    }
 }
 
 @media screen and (max-width:768px) {
@@ -398,6 +414,29 @@
                 .slide-btn-wrapper{
                     display: none;
                 }
+            }
+        }
+    }
+
+    .footer-container{
+        padding: 40px 0px;
+        flex-direction: column;
+        justify-content: baseline;
+        align-items: center;
+        gap: 26px;
+        text-align: center;
+
+        .icon-wrapper{
+            gap: 14px;
+            
+            & > a{
+                width: 35px;
+                height: 35px;
+            }
+
+            .top-btn{
+                width: 35px;
+                height: 35px;
             }
         }
     }
