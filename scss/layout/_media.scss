@@ -40,6 +40,14 @@
                 }
             }
         }
+
+        .project-container{
+            .item-wrapper{
+                .project-slide{
+                    width: 1100px;
+                }
+            }
+        }
     }   
 }
 
@@ -169,6 +177,72 @@
                 }
             }
         }
+
+        .project-container{
+            & > .title-wrapper{
+                .text-box{
+                    & > p{
+                        @include text($grayDark, 18px);
+                    }
+                }
+            }
+
+            .item-wrapper{
+                .project-slide{
+                    width: 780px;
+
+                    .swiper-wrapper{
+                        .item-wrapper{
+                            .item-title-box{
+                                .clone{
+                                    font-size: 18px;
+                                    margin-bottom: 4px;
+                                }
+
+                                & > h3{
+                                    font-size: 30px;
+
+                                    &:after{
+                                        bottom: -20px;
+                                    }
+                                }
+                            }
+
+                            .skill{
+                                font-size: 18px;
+                                line-height: 1.5;
+                            }
+
+                            .item-btn{
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                }
+
+                .slide-btn-wrapper{
+                    .slide-btn-box{
+                        .slide-btn-left,
+                        .slide-btn-right{
+                            width: 28px;
+                            height: 28px;
+                        }
+                    }
+
+                    .swiper-pagination{
+                        width: 100px;
+                        gap: 6px;
+
+                        .swiper-pagination-bullet{
+                            width: 8px;
+                            height: 8px;
+                        }
+                    }
+                }
+
+
+            }
+        }
     }
 }
 
@@ -292,6 +366,37 @@
                         font-family: 'Pretendard-Regular';
                         font-size: 16px;
                     }
+                }
+            }
+        }
+
+        .project-container{
+            padding: 120px 0px;
+
+            & > .title-wrapper{
+                gap: 40px;
+                margin-bottom: 34px;
+
+                .title{
+                    @include title($brownLight, 30px);
+                }
+
+                .text-box{
+                    width: 600px;
+
+                    & > p{
+                        @include text($grayDark, 16px, 2);
+                    }
+                }
+            }
+
+            .item-wrapper{
+                .project-slide{
+                    width: 100%;
+                }
+
+                .slide-btn-wrapper{
+                    display: none;
                 }
             }
         }
