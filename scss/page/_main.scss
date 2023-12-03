@@ -165,5 +165,104 @@
                 }
             }
         }
-    }
+    }//about
+
+    .skills-container{
+        padding: 150px 0px;
+        box-sizing: border-box;
+        background-color: #f4efe7;
+        opacity: 0;
+        transform: translateX(-500px);
+        transition: 0.5s;
+
+        &.on{
+            opacity: 1;
+            transform: translateX(0px);
+        }
+
+        & > .title-wrapper{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 50px;
+            margin-bottom: 50px;
+
+            .title{
+                @include title($gray);
+                opacity: 0;
+                transform: translateY(70px);
+                transition: 0.5s;
+
+                &.on{
+                    opacity: 1;
+                    transform: translateY(0px);
+                }
+            }
+
+            .text-box{
+                opacity: 0;
+                transform: translateY(70px);
+                transition: 0.5s;
+
+                &.on{
+                    opacity: 1;
+                    transform: translateY(0px);
+                }
+
+                & > p{
+                    @include text($brown);
+                }
+            }
+        }
+
+        .skill-wrapper{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            opacity: 0;
+            transform: translateY(70px);
+            transition: 0.5s;
+
+            &.on{
+                opacity: 1;
+                transform: translateY(0px);
+            }
+
+            .skill-box{
+                width: 500px;
+                height: 260px;
+                padding: 30px 40px;
+                box-sizing: border-box;
+                background-color: white;
+                box-shadow: 8px 8px 8px rgba(185, 160, 143, 0.1);
+
+                & > h3{
+                    display: inline-block;
+                    font-family: 'Cormorant Garamond';
+                    font-style: italic;
+                    font-size: 32px;
+                    color: $brown;
+                    text-indent: 4px;
+                    margin-bottom: 22px;
+
+                    &:after{
+                        content: "";
+                        display: block;
+                        width: 105%;
+                        height: 1px;
+                        background-color: $brown;
+                        margin-top: 6px;
+                    }
+                }
+
+                & > li{
+                    font-family: 'Pretendard-Light';
+                    font-size: 18px;
+                    color: $grayDark;
+                    line-height: 1.5;
+                }
+            }
+        }
+    }//skills
 }

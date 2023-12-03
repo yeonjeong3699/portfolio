@@ -378,6 +378,111 @@ body, html {
 .main-container .about-container .profile-wrapper .text-box > a > img {
   width: 30px;
 }
+.main-container .skills-container {
+  padding: 150px 0px;
+  box-sizing: border-box;
+  background-color: #f4efe7;
+  opacity: 0;
+  transform: translateX(-500px);
+  transition: 0.5s;
+}
+.main-container .skills-container.on {
+  opacity: 1;
+  transform: translateX(0px);
+}
+.main-container .skills-container > .title-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 50px;
+}
+.main-container .skills-container > .title-wrapper .title {
+  font-family: "Cormorant Garamond";
+  font-style: italic;
+  font-size: 35px;
+  color: #999999;
+  letter-spacing: 12px;
+  position: relative;
+  opacity: 0;
+  transform: translateY(70px);
+  transition: 0.5s;
+}
+.main-container .skills-container > .title-wrapper .title:after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 1px;
+  background-color: #999999;
+  position: absolute;
+  left: 50%;
+  bottom: -14px;
+  transform: translateX(-50%);
+}
+.main-container .skills-container > .title-wrapper .title.on {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.main-container .skills-container > .title-wrapper .text-box {
+  opacity: 0;
+  transform: translateY(70px);
+  transition: 0.5s;
+}
+.main-container .skills-container > .title-wrapper .text-box.on {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.main-container .skills-container > .title-wrapper .text-box > p {
+  font-family: "Pretendard-Medium";
+  font-size: 22px;
+  color: #917b6a;
+  text-align: center;
+  line-height: 1.5;
+}
+.main-container .skills-container .skill-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  opacity: 0;
+  transform: translateY(70px);
+  transition: 0.5s;
+}
+.main-container .skills-container .skill-wrapper.on {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.main-container .skills-container .skill-wrapper .skill-box {
+  width: 500px;
+  height: 260px;
+  padding: 30px 40px;
+  box-sizing: border-box;
+  background-color: white;
+  box-shadow: 8px 8px 8px rgba(185, 160, 143, 0.1);
+}
+.main-container .skills-container .skill-wrapper .skill-box > h3 {
+  display: inline-block;
+  font-family: "Cormorant Garamond";
+  font-style: italic;
+  font-size: 32px;
+  color: #917b6a;
+  text-indent: 4px;
+  margin-bottom: 22px;
+}
+.main-container .skills-container .skill-wrapper .skill-box > h3:after {
+  content: "";
+  display: block;
+  width: 105%;
+  height: 1px;
+  background-color: #917b6a;
+  margin-top: 6px;
+}
+.main-container .skills-container .skill-wrapper .skill-box > li {
+  font-family: "Pretendard-Light";
+  font-size: 18px;
+  color: #555555;
+  line-height: 1.5;
+}
 
 @media screen and (max-width: 1920px) {
   .main-container .visual-container .visual-bg {
@@ -399,6 +504,13 @@ body, html {
   .main-container .visual-container .visual-text-box > p {
     font-size: 60px;
     line-height: 1.5;
+  }
+  .main-container .skills-container .skill-wrapper {
+    gap: 20px;
+  }
+  .main-container .skills-container .skill-wrapper .skill-box {
+    width: 400px;
+    height: 290px;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -470,6 +582,27 @@ body, html {
   }
   .main-container .about-container .profile-wrapper .text-box > a > img {
     width: 26px;
+  }
+  .main-container .skills-container > .title-wrapper .text-box > p {
+    font-family: "Pretendard-Medium";
+    font-size: 18px;
+    color: #917b6a;
+    text-align: center;
+    line-height: 1.5;
+  }
+  .main-container .skills-container .skill-wrapper {
+    flex-direction: column;
+  }
+  .main-container .skills-container .skill-wrapper .skill-box {
+    width: 680px;
+    height: 210px;
+  }
+  .main-container .skills-container .skill-wrapper .skill-box > h3 {
+    font-size: 26px;
+    margin-bottom: 16px;
+  }
+  .main-container .skills-container .skill-wrapper .skill-box > li {
+    font-size: 17px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -556,5 +689,50 @@ body, html {
   }
   .main-container .about-container .profile-wrapper .text-box > a > img {
     width: 22px;
+  }
+  .main-container .skills-container {
+    padding: 120px 0px;
+  }
+  .main-container .skills-container > .title-wrapper {
+    gap: 40px;
+    margin-bottom: 34px;
+  }
+  .main-container .skills-container > .title-wrapper .title {
+    font-family: "Cormorant Garamond";
+    font-style: italic;
+    font-size: 30px;
+    color: #999999;
+    letter-spacing: 12px;
+    position: relative;
+  }
+  .main-container .skills-container > .title-wrapper .title:after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 1px;
+    background-color: #999999;
+    position: absolute;
+    left: 50%;
+    bottom: -14px;
+    transform: translateX(-50%);
+  }
+  .main-container .skills-container > .title-wrapper .text-box {
+    width: 390px;
+  }
+  .main-container .skills-container > .title-wrapper .text-box > p {
+    font-family: "Pretendard-Medium";
+    font-size: 16px;
+    color: #917b6a;
+    text-align: center;
+    line-height: 2;
+  }
+  .main-container .skills-container .skill-wrapper .skill-box {
+    width: 500px;
+    height: 224px;
+    padding: 24px 34px;
+  }
+  .main-container .skills-container .skill-wrapper .skill-box > li {
+    font-family: "Pretendard-Regular";
+    font-size: 16px;
   }
 }

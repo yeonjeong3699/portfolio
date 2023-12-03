@@ -29,6 +29,17 @@
                 }
             }
         }
+
+        .skills-container{
+            .skill-wrapper{
+                gap: 20px;
+
+                .skill-box{
+                    width: 400px;
+                    height: 290px;
+                }
+            }
+        }
     }   
 }
 
@@ -130,6 +141,34 @@
                 }
             }
         }
+
+        .skills-container{
+            & > .title-wrapper{
+                .text-box{
+                    & > p{
+                        @include text($brown, 18px);
+                    }
+                }
+            }
+            
+            .skill-wrapper{
+                flex-direction: column;
+
+                .skill-box{
+                    width: 680px;
+                    height: 210px;
+
+                    & > h3{
+                        font-size: 26px;
+                        margin-bottom: 16px;
+                    }
+
+                    & > li{
+                        font-size: 17px;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -218,6 +257,40 @@
                         & > img{
                             width: 22px;
                         }
+                    }
+                }
+            }
+        }
+
+        .skills-container{
+            padding: 120px 0px;
+
+            & > .title-wrapper{
+                gap: 40px;
+                margin-bottom: 34px;
+
+                .title{
+                    @include title($gray, 30px);
+                }
+
+                .text-box{
+                    width: 390px;
+
+                    & > p{
+                        @include text($brown, 16px, 2);
+                    }
+                }
+            }
+            
+            .skill-wrapper{
+                .skill-box{
+                    width: 500px;
+                    height: 224px;
+                    padding: 24px 34px;
+
+                    & > li{
+                        font-family: 'Pretendard-Regular';
+                        font-size: 16px;
                     }
                 }
             }

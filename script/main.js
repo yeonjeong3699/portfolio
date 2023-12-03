@@ -10,7 +10,7 @@ window.addEventListener('load', function () {
 
     const innerWidth = window.innerWidth;
 
-    
+
     visualText01.classList.add('on');
 
     setTimeout(function () {
@@ -44,13 +44,12 @@ window.addEventListener('scroll', function () {
     const visualH = document.querySelector('.visual-container').offsetHeight;
     const aboutH = document.querySelector('.about-container').offsetHeight;
 
-    const aboutTitle = document.querySelector('.about-container > .title-wrapper > .title');
-    const aboutText = document.querySelector('.about-container > .title-wrapper > .text-box');
-    const aboutProfile = document.querySelector('.profile-wrapper');
+    //about
+    if (scrollY >= visualH / 3) {
+        const aboutTitle = document.querySelector('.about-container > .title-wrapper > .title');
+        const aboutText = document.querySelector('.about-container > .title-wrapper > .text-box');
+        const aboutProfile = document.querySelector('.profile-wrapper');
 
-
-    //about-container
-    if (scrollY >= visualH / 2) {
         aboutTitle.classList.add('on');
 
         setTimeout(function () {
@@ -60,5 +59,27 @@ window.addEventListener('scroll', function () {
         setTimeout(function () {
             aboutProfile.classList.add('on');
         }, 800)
+    }
+
+    //skills
+    if (scrollY >= visualH + (aboutH / 3)) {
+        const skillsContainer = document.querySelector('.skills-container');
+        const skillsTitle = document.querySelector('.skills-container > .title-wrapper > .title');
+        const skillsText = document.querySelector('.skills-container > .title-wrapper > .text-box');
+        const skillsItem = document.querySelector('.skill-wrapper');
+
+        skillsContainer.classList.add('on');
+
+        setTimeout(function () {
+            skillsTitle.classList.add('on');
+        }, 400)
+
+        setTimeout(function () {
+            skillsText.classList.add('on');
+        }, 800)
+
+        setTimeout(function () {
+            skillsItem.classList.add('on');
+        }, 1200)
     }
 })
