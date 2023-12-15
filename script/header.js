@@ -28,10 +28,12 @@ window.addEventListener('load', function () {
     const menuList02 = document.querySelector('.list02');
     const menuList03 = document.querySelector('.list03');
     const menuList04 = document.querySelector('.list04');
+    const menuList05 = document.querySelector('.list05');
 
     const visualH = document.querySelector('.visual-container').offsetHeight;
     const aboutH = document.querySelector('.about-container').offsetHeight;
     const skillsH = document.querySelector('.skills-container').offsetHeight;
+    const projectH = document.querySelector('.project-container').offsetHeight;
 
     menuList01.addEventListener('click', function () {
         window.scrollTo(0, 0);
@@ -47,5 +49,9 @@ window.addEventListener('load', function () {
 
     menuList04.addEventListener('click', function () {
         window.scrollTo(0, visualH + aboutH + skillsH);
+    })
+
+    menuList05.addEventListener('click', function () {
+        window.scrollTo(0, visualH + aboutH + skillsH + projectH);
     })
 })

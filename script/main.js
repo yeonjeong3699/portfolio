@@ -43,6 +43,7 @@ window.addEventListener('scroll', function () {
     const visualH = document.querySelector('.visual-container').offsetHeight;
     const aboutH = document.querySelector('.about-container').offsetHeight;
     const skillsH = document.querySelector('.skills-container').offsetHeight;
+    const projectH = document.querySelector('.project-container').offsetHeight;
 
     //about
     if (scrollY >= visualH / 3) {
@@ -119,7 +120,91 @@ window.addEventListener('scroll', function () {
             slideBtn.classList.add('on');
         }, 1800)
     }
+
+    //images
+    if (scrollY >= visualH + aboutH + skillsH + (projectH / 2)) {
+        const imagesTitle = document.querySelector('.images-container > .title-wrapper > .title');
+        const imagesViewMore = document.querySelector('.images-container > .title-wrapper > .view-more');
+        const imagesItem01 = document.querySelector('.images-item01');
+        const imagesItem02 = document.querySelector('.images-item02');
+        const imagesItem03 = document.querySelector('.images-item03');
+        const imagesItem04 = document.querySelector('.images-item04');
+        const imagesItem05 = document.querySelector('.images-item05');
+        const imagesItem06 = document.querySelector('.images-item06');
+
+        imagesTitle.classList.add('on');
+
+        setTimeout(function () {
+            imagesViewMore.classList.add('on');
+        }, 300)
+
+        setTimeout(function () {
+            imagesItem01.classList.add('on');
+        }, 500)
+
+        setTimeout(function () {
+            imagesItem02.classList.add('on');
+        }, 700)
+
+        setTimeout(function () {
+            imagesItem03.classList.add('on');
+        }, 900)
+
+        setTimeout(function () {
+            imagesItem04.classList.add('on');
+        }, 1100)
+
+        setTimeout(function () {
+            imagesItem05.classList.add('on');
+        }, 1300)
+
+        setTimeout(function () {
+            imagesItem06.classList.add('on');
+        }, 1500)
+    }
 })
+
+//click
+const imagesItem = document.querySelectorAll('.images-item');
+
+imagesItem.forEach(function (item) {
+    const modalWrap = document.querySelector('.modal-wrapper');
+    const modalBg = document.querySelector('.modal-bg');
+    const modalItem = document.querySelector('.modal-item');
+    const modalCloseBtn = document.querySelector('.modal-close-btn');
+
+    item.addEventListener('click', function () {
+        if (modalItem.hasChildNodes() == false) {
+            const createImage = document.createElement('img');
+            modalItem.append(createImage);
+            modalItem.firstElementChild.setAttribute('src', item.firstElementChild.src);
+        }
+        
+        modalWrap.classList.add('on');
+        modalBg.classList.add('on');
+        modalItem.classList.add('on');
+        modalCloseBtn.classList.add('on');
+
+        document.querySelector('body').style.overflow = 'hidden';
+        document.querySelector('html').style.overflow = 'hidden';
+    })
+
+    modalCloseBtn.addEventListener('click', function () {
+        if (modalItem.hasChildNodes() == true) {
+            const image = modalItem.firstElementChild;
+            modalItem.removeChild(image);
+        }
+
+        modalWrap.classList.remove('on');
+        modalBg.classList.remove('on');
+        modalItem.classList.remove('on');
+        modalCloseBtn.classList.remove('on');
+
+        document.querySelector('body').style.overflow = '';
+        document.querySelector('html').style.overflow = '';
+    })
+})
+
 
 //swiper
 const projectSlide = new Swiper('.project-slide', {
@@ -141,7 +226,7 @@ const projectSlide = new Swiper('.project-slide', {
         1025: {
             slidesPerView: 3, spaceBetween: 20, centeredSlides: false
         },
-        1401:{
+        1401: {
             slidesPerView: 4, spaceBetween: 20, centeredSlides: false
         }
     }

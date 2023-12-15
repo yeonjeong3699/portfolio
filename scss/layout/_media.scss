@@ -48,6 +48,18 @@
                 }
             }
         }
+
+        .images-container{
+            & > .title-wrapper{
+                width: 1230px;
+            }
+
+            .images-wrapper{
+                width: 1230px;
+                grid-template-rows: 400px 400px;
+                gap: 15px;
+            }
+        }
     }   
 }
 
@@ -243,6 +255,28 @@
 
             }
         }
+
+        .images-container{
+            & > .title-wrapper{
+                width: 944px;
+            }
+
+            .images-wrapper{
+                width: 944px;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 464.5px 464.5px 464.5px;
+            }
+
+            .modal-wrapper{
+                .modal-item{
+                    width: 706px;
+                    max-height: calc(100vh - 140px);
+                }
+                .modal-close-btn{
+                    top: 70px;
+                }
+            }
+        }
     }
 
     .footer-container{
@@ -413,6 +447,45 @@
 
                 .slide-btn-wrapper{
                     display: none;
+                }
+            }
+        }
+
+        .images-container{
+            padding: 120px 0px;
+            gap: 50px;
+
+            & > .title-wrapper{
+                width: 600px;
+
+                .title{
+                    @include title($gray, 30px);
+                }
+
+                .view-more{
+                    font-size: 16px;
+
+                    & > img{
+                        width: 18px;
+                    }
+                }
+            }
+
+            .images-wrapper{
+                width: 600px;
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(6, 600px);
+                gap: 30px;
+            }
+
+            .modal-wrapper{
+                .modal-item{
+                    width: 656px;
+                    max-height: calc(100vh - 200px);
+                }
+                .modal-close-btn{
+                    top: 35px;
+                    right: 35px;
                 }
             }
         }

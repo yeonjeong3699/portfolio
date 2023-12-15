@@ -501,4 +501,193 @@
             }
         }
     }//project
+
+    .images-container{
+        padding: 150px 0px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 55px;
+        background-color: #f4efe7;
+
+        & > .title-wrapper{
+            width: 1410px;
+            position: relative;
+            text-align: center;
+
+            .title{
+                @include title($gray);
+                opacity: 0;
+                transform: translateY(70px);
+                transition: 0.5s;
+
+                &.on{
+                    opacity: 1;
+                    transform: translateY(0px);
+                }
+            }
+
+            .view-more{
+                position: absolute;
+                right: 0px;
+                bottom: -12px;
+                font-family: 'Pretendard-Light';
+                font-size: 20px;
+                color: $brown;
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                
+                opacity: 0;
+                transform: translateY(70px);
+                transition: 0.5s;
+
+                & > img{
+                    width: 22px;
+                }
+
+                &.on{
+                    opacity: 1;
+                    transform: translateY(0px);
+                }
+            }
+        }
+
+        .images-wrapper{
+            width: 1410px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 450px 450px;
+            gap: 30px;
+
+            .images-item{
+                border: solid 4px white;
+                box-shadow: 8px 8px 6px rgba(79, 66, 57, 0.1);
+                overflow: hidden;
+                cursor: pointer;
+
+                & > img{
+                    width: 100%;
+                }
+            }
+
+            .images-item01,
+            .images-item02,
+            .images-item03{
+                opacity: 0;
+                transform: translateX(-70px);
+                transition: 0.5s;
+
+                &.on{
+                    opacity: 1;
+                    transform: translateX(0px);
+                }
+            }
+
+            .images-item04,
+            .images-item05,
+            .images-item06{
+                opacity: 0;
+                transform: translateX(70px);
+                transition: 0.5s;
+
+                &.on{
+                    opacity: 1;
+                    transform: translateX(0px);
+                }
+            }
+        }
+
+        .modal-wrapper{
+            display: none;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            z-index: 999;
+
+            &.on{
+                display: block;
+            }
+
+            .modal-bg{
+                display: none;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.8);
+
+                &.on{
+                    display: block;
+                }
+            }
+
+            .modal-item{
+                display: none;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 806px;
+                max-height: calc(100vh - 100px);
+                overflow-x: hidden;
+                overflow-y: auto;
+                scrollbar-width: thin;
+                scrollbar-color: white black;
+
+                &::-webkit-scrollbar{
+                    width: 6px;
+                }
+                &::-webkit-scrollbar-thumb {
+                    border-radius: 10px;
+                    background: white;
+                }
+
+                &.on{
+                    display: block;
+                }
+
+                & > img{
+                    width: 100%;
+                }
+            }
+
+            .modal-close-btn{
+                display: none;
+                width: 30px;
+                height: 30px;
+                border: none;
+                background-color: transparent;
+                position: absolute;
+                top: 50px;
+                right: 80px;
+                cursor: pointer;
+
+                & > i{
+                    display: block;
+                    width: 38px;
+                    height: 5px;
+                    border-radius: 50px;
+                    background-color: white;
+                    position: absolute;
+                    top: 13px;
+                    left: -4px;
+                    
+                    &:first-of-type{
+                        transform: rotate(45deg);
+                    }
+
+                    &:last-of-type{
+                        transform: rotate(-45deg);
+                    }
+                }
+
+                &.on{
+                    display: block;
+                }
+            }
+        }
+
+    }//images
 }
