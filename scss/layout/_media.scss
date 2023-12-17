@@ -56,11 +56,35 @@
 
             .images-wrapper{
                 width: 1230px;
-                grid-template-rows: 400px 400px;
                 gap: 15px;
+
+                .images-item{
+                    width: 400px;
+                    height: 400px;
+                }
             }
         }
-    }   
+    }
+
+    .images-main-container{
+        .menu-wrapper{
+            width: 1230px;
+        }
+
+        .images-wrapper{
+            width: 1230px;
+            gap: 15px;
+
+            .images-item{
+                width: 400px;
+                height: 400px;
+
+                &.bnr{
+                    height: 200px;
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width:1024px) {
@@ -258,23 +282,92 @@
 
         .images-container{
             & > .title-wrapper{
-                width: 944px;
+                width: 900px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+
+                .title{
+                    margin-bottom: 35px;
+                }
+
+                .text{
+                    @include text($brown, 18px);
+                }
+
+                .view-more{
+                    position: static;
+                    justify-content: center;
+                    border-radius: 50px;
+                    background-color: #b0937e;
+                    padding: 10px 34px;
+                    box-sizing: border-box;
+                    font-size: 18px;
+                    color: white;
+                    
+
+                    & > img{
+                        display: none;
+                    }
+                }
             }
 
             .images-wrapper{
-                width: 944px;
-                grid-template-columns: 1fr 1fr;
-                grid-template-rows: 464.5px 464.5px 464.5px;
+                width: 900px;
+                gap: 20px;
+
+                .images-item{
+                    width: 440px;
+                    height: 440px;
+                }
             }
 
             .modal-wrapper{
                 .modal-item{
-                    width: 706px;
+                    max-width: 706px;
                     max-height: calc(100vh - 140px);
                 }
                 .modal-close-btn{
                     top: 70px;
                 }
+            }
+        }
+    }
+
+    .images-main-container{
+        padding: 50px 0px 100px;
+
+        .menu-wrapper{
+            width: 900px;
+            gap: 30px;
+
+            & > a{
+                font-size: 26px;
+            }
+        }
+
+        .images-wrapper{
+            width: 900px;
+            gap: 20px;
+
+            .images-item{
+                width: 440px;
+                height: 440px;
+
+                &.bnr{
+                    height: 220px;
+                }
+            }
+        }
+
+        .modal-wrapper{
+            .modal-item{
+                max-width: 706px;
+                max-height: calc(100vh - 140px);
+            }
+            .modal-close-btn{
+                top: 70px;
             }
         }
     }
@@ -462,6 +555,10 @@
                     @include title($gray, 30px);
                 }
 
+                .text{
+                    @include text($brown, 16px);
+                }
+
                 .view-more{
                     font-size: 16px;
 
@@ -472,21 +569,54 @@
             }
 
             .images-wrapper{
-                width: 600px;
-                grid-template-columns: 1fr;
-                grid-template-rows: repeat(6, 600px);
+                width: 500px;
                 gap: 30px;
+
+                .images-item{
+                    width: 500px;
+                    height: 500px;
+                }
             }
 
             .modal-wrapper{
                 .modal-item{
-                    width: 656px;
+                    max-width: 656px;
                     max-height: calc(100vh - 200px);
                 }
                 .modal-close-btn{
                     top: 35px;
                     right: 35px;
                 }
+            }
+        }
+    }
+
+    .images-main-container{
+        .menu-wrapper{
+            width: 700px;
+        }
+
+        .images-wrapper{
+            width: 700px;
+
+            .images-item{
+                width: 340px;
+                height: 340px;
+
+                &.bnr{
+                    height: 160px;
+                }
+            }
+        }
+
+        .modal-wrapper{
+            .modal-item{
+                max-width: 656px;
+                max-height: calc(100vh - 200px);
+            }
+            .modal-close-btn{
+                top: 35px;
+                right: 35px;
             }
         }
     }

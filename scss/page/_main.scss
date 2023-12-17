@@ -521,6 +521,7 @@
                 opacity: 0;
                 transform: translateY(70px);
                 transition: 0.5s;
+                margin-bottom: 40px;
 
                 &.on{
                     opacity: 1;
@@ -528,13 +529,30 @@
                 }
             }
 
+            .text{
+                @include text($brown);
+                opacity: 0;
+                transform: translateY(70px);
+                transition: 0.5s;
+
+                &.on{
+                    opacity: 1;
+                    transform: translateY(0px);
+                }
+
+                & > p{
+
+                }
+            }
+
             .view-more{
                 position: absolute;
                 right: 0px;
-                bottom: -12px;
+                bottom: 6px;
                 font-family: 'Pretendard-Light';
                 font-size: 20px;
                 color: $brown;
+                letter-spacing: -0.5px;
                 display: flex;
                 align-items: center;
                 gap: 5px;
@@ -556,13 +574,15 @@
 
         .images-wrapper{
             width: 1410px;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 450px 450px;
+            display: flex;
+            flex-wrap: wrap;
             gap: 30px;
 
             .images-item{
+                width: 450px;
+                height: 450px;
                 border: solid 4px white;
+                box-sizing: border-box;
                 box-shadow: 8px 8px 6px rgba(79, 66, 57, 0.1);
                 overflow: hidden;
                 cursor: pointer;
@@ -630,6 +650,7 @@
                 left: 50%;
                 transform: translate(-50%, -50%);
                 width: 806px;
+                max-width: 806px;
                 max-height: calc(100vh - 100px);
                 overflow-x: hidden;
                 overflow-y: auto;

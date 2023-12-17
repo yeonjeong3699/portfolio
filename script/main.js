@@ -124,6 +124,7 @@ window.addEventListener('scroll', function () {
     //images
     if (scrollY >= visualH + aboutH + skillsH + (projectH / 2)) {
         const imagesTitle = document.querySelector('.images-container > .title-wrapper > .title');
+        const imagesText = document.querySelector('.images-container > .title-wrapper > .text');
         const imagesViewMore = document.querySelector('.images-container > .title-wrapper > .view-more');
         const imagesItem01 = document.querySelector('.images-item01');
         const imagesItem02 = document.querySelector('.images-item02');
@@ -135,32 +136,36 @@ window.addEventListener('scroll', function () {
         imagesTitle.classList.add('on');
 
         setTimeout(function () {
-            imagesViewMore.classList.add('on');
+            imagesText.classList.add('on');
         }, 300)
 
         setTimeout(function () {
-            imagesItem01.classList.add('on');
+            imagesViewMore.classList.add('on');
         }, 500)
 
         setTimeout(function () {
-            imagesItem02.classList.add('on');
+            imagesItem01.classList.add('on');
         }, 700)
 
         setTimeout(function () {
-            imagesItem03.classList.add('on');
+            imagesItem02.classList.add('on');
         }, 900)
 
         setTimeout(function () {
-            imagesItem04.classList.add('on');
+            imagesItem03.classList.add('on');
         }, 1100)
 
         setTimeout(function () {
-            imagesItem05.classList.add('on');
+            imagesItem04.classList.add('on');
         }, 1300)
 
         setTimeout(function () {
-            imagesItem06.classList.add('on');
+            imagesItem05.classList.add('on');
         }, 1500)
+
+        setTimeout(function () {
+            imagesItem06.classList.add('on');
+        }, 1700)
     }
 })
 

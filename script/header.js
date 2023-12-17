@@ -36,22 +36,22 @@ window.addEventListener('load', function () {
     const projectH = document.querySelector('.project-container').offsetHeight;
 
     menuList01.addEventListener('click', function () {
-        window.scrollTo(0, 0);
+        window.scrollTo({ top: 0, behavior: "smooth" });
     })
 
     menuList02.addEventListener('click', function () {
-        window.scrollTo(0, visualH);
+        window.scrollTo({ top: visualH, behavior: "smooth" });
     })
 
     menuList03.addEventListener('click', function () {
-        window.scrollTo(0, visualH + aboutH);
+        window.scrollTo({ top: visualH + aboutH, behavior: "smooth" });
     })
 
     menuList04.addEventListener('click', function () {
-        window.scrollTo(0, visualH + aboutH + skillsH);
+        window.scrollTo({ top: visualH + aboutH + skillsH, behavior: "smooth" });
     })
 
     menuList05.addEventListener('click', function () {
-        window.scrollTo(0, visualH + aboutH + skillsH + projectH);
+        window.scrollTo({ top: visualH + aboutH + skillsH + projectH, behavior: "smooth" });
     })
 })
