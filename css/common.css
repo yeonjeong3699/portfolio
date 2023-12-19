@@ -339,10 +339,6 @@ body, html {
   font-family: "Pretendard-black";
   color: white;
 }
-.main-container .visual-container .visual-text-box .visual-text02 {
-  font-family: "Pretendard-black";
-  color: white;
-}
 .main-container .visual-container .visual-bg {
   width: 100%;
 }
@@ -1465,7 +1461,7 @@ body, html {
     transform: translateX(-50%);
   }
   .main-container .about-container > .title-wrapper .text-box {
-    width: 374px;
+    width: 650px;
   }
   .main-container .about-container > .title-wrapper .text-box > p {
     font-family: "Pretendard-Medium";
@@ -1524,7 +1520,7 @@ body, html {
     transform: translateX(-50%);
   }
   .main-container .skills-container > .title-wrapper .text-box {
-    width: 390px;
+    width: 530px;
   }
   .main-container .skills-container > .title-wrapper .text-box > p {
     font-family: "Pretendard-Medium";
