@@ -228,7 +228,7 @@
                     width: 780px;
 
                     .swiper-wrapper{
-                        .item-wrapper{
+                        .item-box{
                             .item-title-box{
                                 .clone{
                                     font-size: 18px;
@@ -643,4 +643,8 @@
             }
         }
     }
+}
+
+@media screen and (max-width:480px) {
+    
 }

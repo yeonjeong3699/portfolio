@@ -628,7 +628,7 @@ body, html {
 .main-container .project-container .item-wrapper .project-slide {
   width: 1500px;
 }
-.main-container .project-container .item-wrapper .project-slide .swiper-wrapper .item-wrapper {
+.main-container .project-container .item-wrapper .project-slide .swiper-wrapper .item-box {
   background-color: #ece1d9;
   height: 500px;
   border-radius: 30px;
@@ -644,10 +644,10 @@ body, html {
   margin-top: 20px;
   transition: 0.5s;
 }
-.main-container .project-container .item-wrapper .project-slide .swiper-wrapper .item-wrapper:hover {
+.main-container .project-container .item-wrapper .project-slide .swiper-wrapper .item-box.hover {
   margin-top: 0px;
 }
-.main-container .project-container .item-wrapper .project-slide .swiper-wrapper .item-wrapper:after {
+.main-container .project-container .item-wrapper .project-slide .swiper-wrapper .item-box:after {
   content: "";
   display: block;
   width: 100%;
@@ -658,20 +658,20 @@ body, html {
   left: 0px;
   z-index: -2;
 }
-.main-container .project-container .item-wrapper .project-slide .swiper-wrapper .item-wrapper .item-title-box .clone {
+.main-container .project-container .item-wrapper .project-slide .swiper-wrapper .item-box .item-title-box .clone {
   font-family: "Pretendard-Light";
   font-size: 22px;
   margin-bottom: 6px;
 }
-.main-container .project-container .item-wrapper .project-slide .swiper-wrapper .item-wrapper .item-title-box .clone.off {
+.main-container .project-container .item-wrapper .project-slide .swiper-wrapper .item-box .item-title-box .clone.off {
   opacity: 0;
 }
-.main-container .project-container .item-wrapper .project-slide .swiper-wrapper .item-wrapper .item-title-box > h3 {
+.main-container .project-container .item-wrapper .project-slide .swiper-wrapper .item-box .item-title-box > h3 {
   font-family: "Pretendard-SemiBold";
   font-size: 34px;
   position: relative;
 }
-.main-container .project-container .item-wrapper .project-slide .swiper-wrapper .item-wrapper .item-title-box > h3:after {
+.main-container .project-container .item-wrapper .project-slide .swiper-wrapper .item-box .item-title-box > h3:after {
   content: "";
   display: block;
   width: 30px;
@@ -682,29 +682,28 @@ body, html {
   bottom: -24px;
   transform: translateX(-50%);
 }
-.main-container .project-container .item-wrapper .project-slide .swiper-wrapper .item-wrapper .skill {
+.main-container .project-container .item-wrapper .project-slide .swiper-wrapper .item-box .skill {
   font-family: "pretendard-Light";
   font-size: 20px;
   line-height: 1.3;
 }
-.main-container .project-container .item-wrapper .project-slide .swiper-wrapper .item-wrapper .item-btn {
+.main-container .project-container .item-wrapper .project-slide .swiper-wrapper .item-box .item-btn {
   display: block;
   padding: 14px 50px;
   box-sizing: border-box;
-  border: solid 1px white;
   border-radius: 50px;
   font-family: "Cormorant Garamond";
   font-style: italic;
   font-size: 20px;
-  color: white;
+  color: #594c42;
   transition: 0.5s;
   position: relative;
   overflow: hidden;
 }
-.main-container .project-container .item-wrapper .project-slide .swiper-wrapper .item-wrapper .item-btn:after {
+.main-container .project-container .item-wrapper .project-slide .swiper-wrapper .item-box .item-btn:after {
   content: "";
   display: block;
-  width: 0%;
+  width: 100%;
   height: 100%;
   background-color: white;
   position: absolute;
@@ -713,13 +712,7 @@ body, html {
   z-index: -1;
   transition: 0.5s;
 }
-.main-container .project-container .item-wrapper .project-slide .swiper-wrapper .item-wrapper .item-btn:hover {
-  color: #594c42;
-}
-.main-container .project-container .item-wrapper .project-slide .swiper-wrapper .item-wrapper .item-btn:hover:after {
-  width: 100%;
-}
-.main-container .project-container .item-wrapper .project-slide .swiper-wrapper .item-wrapper > img {
+.main-container .project-container .item-wrapper .project-slide .swiper-wrapper .item-box > img {
   width: 100%;
   position: absolute;
   top: 0px;
@@ -1293,21 +1286,21 @@ body, html {
   .main-container .project-container .item-wrapper .project-slide {
     width: 780px;
   }
-  .main-container .project-container .item-wrapper .project-slide .swiper-wrapper .item-wrapper .item-title-box .clone {
+  .main-container .project-container .item-wrapper .project-slide .swiper-wrapper .item-box .item-title-box .clone {
     font-size: 18px;
     margin-bottom: 4px;
   }
-  .main-container .project-container .item-wrapper .project-slide .swiper-wrapper .item-wrapper .item-title-box > h3 {
+  .main-container .project-container .item-wrapper .project-slide .swiper-wrapper .item-box .item-title-box > h3 {
     font-size: 30px;
   }
-  .main-container .project-container .item-wrapper .project-slide .swiper-wrapper .item-wrapper .item-title-box > h3:after {
+  .main-container .project-container .item-wrapper .project-slide .swiper-wrapper .item-box .item-title-box > h3:after {
     bottom: -20px;
   }
-  .main-container .project-container .item-wrapper .project-slide .swiper-wrapper .item-wrapper .skill {
+  .main-container .project-container .item-wrapper .project-slide .swiper-wrapper .item-box .skill {
     font-size: 18px;
     line-height: 1.5;
   }
-  .main-container .project-container .item-wrapper .project-slide .swiper-wrapper .item-wrapper .item-btn {
+  .main-container .project-container .item-wrapper .project-slide .swiper-wrapper .item-box .item-btn {
     font-size: 18px;
   }
   .main-container .project-container .item-wrapper .slide-btn-wrapper .slide-btn-box .slide-btn-left,

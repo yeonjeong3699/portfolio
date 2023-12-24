@@ -184,7 +184,7 @@ imagesItem.forEach(function (item) {
             modalItem.append(createImage);
             modalItem.firstElementChild.setAttribute('src', item.firstElementChild.src);
         }
-        
+
         modalWrap.classList.add('on');
         modalBg.classList.add('on');
         modalItem.classList.add('on');
@@ -210,7 +210,6 @@ imagesItem.forEach(function (item) {
     })
 })
 
-
 //swiper
 const projectSlide = new Swiper('.project-slide', {
     slidesPerView: 1.5,
@@ -235,4 +234,22 @@ const projectSlide = new Swiper('.project-slide', {
             slidesPerView: 4, spaceBetween: 20, centeredSlides: false
         }
     }
+})
+
+
+//project-container
+const itemBox = document.querySelectorAll('.item-box');
+
+itemBox.forEach(function (item) {
+    item.addEventListener('mouseenter', function () {
+        if (window.innerWidth > 768) {
+            item.classList.add('hover');
+        }
+    })
+
+    item.addEventListener('mouseleave', function(){
+        if (window.innerWidth > 768) {
+            item.classList.remove('hover');
+        }
+    })
 })
