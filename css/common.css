@@ -999,6 +999,7 @@ body, html {
 .images-main-container .menu-wrapper {
   width: 1410px;
   padding-left: 20px;
+  box-sizing: border-box;
   display: flex;
   gap: 38px;
 }
@@ -1212,6 +1213,17 @@ body, html {
   .header-container .menu-wrapper > nav .menu-list > li {
     font-size: 24px;
   }
+  .images-header-container {
+    height: 60px;
+    padding: 0px 40px;
+  }
+  .images-header-container .logo > a {
+    font-size: 30px;
+  }
+  .images-header-container .header-top-btn {
+    width: 26px;
+    height: 26px;
+  }
   .main-container .visual-container .visual-text-box {
     left: 90px;
   }
@@ -1417,6 +1429,12 @@ body, html {
   .header-container.on {
     position: fixed;
   }
+  .images-header-container {
+    justify-content: center;
+  }
+  .images-header-container .header-top-btn {
+    display: none;
+  }
   .main-container .visual-container .visual-text-box {
     left: 55px;
   }
@@ -1621,7 +1639,7 @@ body, html {
     height: 500px;
   }
   .main-container .images-container .modal-wrapper .modal-item {
-    max-width: 656px;
+    max-width: calc(100vW - 50px);
     max-height: calc(100vh - 200px);
   }
   .main-container .images-container .modal-wrapper .modal-close-btn {
@@ -1642,7 +1660,7 @@ body, html {
     height: 160px;
   }
   .images-main-container .modal-wrapper .modal-item {
-    max-width: 656px;
+    max-width: calc(100vW - 50px);
     max-height: calc(100vh - 200px);
   }
   .images-main-container .modal-wrapper .modal-close-btn {
@@ -1667,5 +1685,114 @@ body, html {
   .footer-container .icon-wrapper .top-btn {
     width: 35px;
     height: 35px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .main-container .visual-container .visual-text-box {
+    left: 40px;
+  }
+  .main-container .visual-container .visual-text-box > p {
+    font-size: 26px;
+  }
+  .main-container .about-container > .title-wrapper .text-box {
+    width: 380px;
+  }
+  .main-container .about-container > .title-wrapper .text-box > p {
+    font-family: "Pretendard-Medium";
+    font-size: 16px;
+    color: #555555;
+    text-align: center;
+    line-height: 1.7;
+  }
+  .main-container .about-container .profile-wrapper {
+    width: 400px;
+    height: auto;
+    padding: 50px 0px;
+    box-sizing: border-box;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .main-container .about-container .profile-wrapper .img-box {
+    width: 180px;
+    height: 180px;
+  }
+  .main-container .skills-container > .title-wrapper .text-box {
+    width: 380px;
+  }
+  .main-container .skills-container > .title-wrapper .text-box > p {
+    font-family: "Pretendard-Medium";
+    font-size: 16px;
+    color: #555555;
+    text-align: center;
+    line-height: 1.7;
+  }
+  .main-container .skills-container .skill-wrapper .skill-box {
+    width: 380px;
+    height: auto;
+    padding: 20px 30px;
+  }
+  .main-container .skills-container .skill-wrapper .skill-box > h3 {
+    font-size: 22px;
+  }
+  .main-container .skills-container .skill-wrapper .skill-box > h3:after {
+    margin-top: 3px;
+  }
+  .main-container .skills-container .skill-wrapper .skill-box > li {
+    font-size: 14px;
+  }
+  .main-container .project-container > .title-wrapper .text-box {
+    width: 370px;
+  }
+  .main-container .project-container > .title-wrapper .text-box > p {
+    font-family: "Pretendard-Medium";
+    font-size: 16px;
+    color: #555555;
+    text-align: center;
+    line-height: 1.7;
+  }
+  .main-container .project-container .item-wrapper .project-slide .swiper-wrapper .item-box {
+    height: 400px;
+    gap: 70px;
+  }
+  .main-container .project-container .item-wrapper .project-slide .swiper-wrapper .item-box .item-title-box > h3 {
+    font-size: 24px;
+  }
+  .main-container .project-container .item-wrapper .project-slide .swiper-wrapper .item-box .skill {
+    font-size: 16px;
+  }
+  .main-container .project-container .item-wrapper .project-slide .swiper-wrapper .item-box .item-btn {
+    padding: 12px 40px;
+  }
+  .main-container .images-container > .title-wrapper .text {
+    width: 300px;
+    font-family: "Pretendard-Medium";
+    font-size: 16px;
+    color: #555555;
+    text-align: center;
+    line-height: 1.7;
+  }
+  .main-container .images-container > .title-wrapper .view-more {
+    margin-top: 10px;
+  }
+  .main-container .images-container .images-wrapper {
+    justify-content: center;
+  }
+  .main-container .images-container .images-wrapper .images-item {
+    width: 400px;
+    height: 400px;
+  }
+  .images-main-container .menu-wrapper {
+    width: 480px;
+    padding-left: 0px;
+    justify-content: center;
+  }
+  .images-main-container .images-wrapper {
+    width: 480px;
+    justify-content: center;
+    gap: 30px;
+  }
+  .images-main-container .images-wrapper .images-item {
+    width: 400px;
+    height: 400px;
   }
 }

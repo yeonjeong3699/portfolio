@@ -127,6 +127,22 @@
         }
     }
 
+    .images-header-container{
+        height: 60px;
+        padding: 0px 40px;
+
+        .logo{
+            & > a{
+                font-size: 30px;
+            }
+        }
+
+        .header-top-btn{
+            width: 26px;
+            height: 26px;
+        }
+    }
+
     .main-container{
         .visual-container{
             .visual-text-box{
@@ -411,6 +427,14 @@
         }
     }
 
+    .images-header-container{
+        justify-content: center;
+
+        .header-top-btn{
+            display: none;
+        }
+    }
+
     .main-container{
         .visual-container{
             .visual-text-box{
@@ -580,7 +604,7 @@
 
             .modal-wrapper{
                 .modal-item{
-                    max-width: 656px;
+                    max-width: calc(100vW - 50px);
                     max-height: calc(100vh - 200px);
                 }
                 .modal-close-btn{
@@ -611,7 +635,7 @@
 
         .modal-wrapper{
             .modal-item{
-                max-width: 656px;
+                max-width: calc(100vW - 50px);
                 max-height: calc(100vh - 200px);
             }
             .modal-close-btn{
@@ -646,5 +670,153 @@
 }
 
 @media screen and (max-width:480px) {
-    
+    .main-container{
+        .visual-container{
+            .visual-text-box{
+                left: 40px;
+
+                & > p{
+                    font-size: 26px;
+                }
+            }
+        }
+
+        .about-container{
+            & > .title-wrapper{
+                .text-box{
+                    width: 380px;
+
+                    & > p{
+                        @include text($grayDark, 16px, 1.7);
+                    }
+                }
+            }
+
+            .profile-wrapper{
+                width: 400px;
+                height: auto;
+                padding: 50px 0px;
+                box-sizing: border-box;
+                flex-direction: column;
+                gap: 30px;
+
+                .img-box{
+                    width: 180px;
+                    height: 180px;
+                }
+            }
+        }
+
+        .skills-container{
+            & > .title-wrapper{
+                .text-box{
+                    width: 380px;
+
+                    & > p{
+                        @include text($grayDark, 16px, 1.7);
+                    }
+                }
+            }
+
+            .skill-wrapper{
+                .skill-box{
+                    width: 380px;
+                    height: auto;
+                    padding: 20px 30px;
+
+                    & > h3{
+                        font-size: 22px;
+
+                        &:after{
+                            margin-top: 3px;
+                        }
+                    }
+
+                    & > li{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+
+        .project-container{
+            & > .title-wrapper{
+                .text-box{
+                    width: 370px;
+
+                    & > p{
+                        @include text($grayDark, 16px, 1.7);
+                    }
+                }
+            }
+
+            .item-wrapper{
+                .project-slide{
+                    .swiper-wrapper{
+                        .item-box{
+                            height: 400px;
+                            gap: 70px;
+
+                            .item-title-box{
+                                & > h3{
+                                    font-size: 24px;
+                                }
+                            }
+
+                            .skill{
+                                font-size: 16px;
+                            }
+
+                            .item-btn{
+                                padding: 12px 40px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .images-container{
+            & > .title-wrapper{
+                .text{
+                    width: 300px;
+                    @include text($grayDark, 16px, 1.7);
+                }
+
+                .view-more{
+                    margin-top: 10px;
+                }
+
+            }
+
+            .images-wrapper{
+                justify-content: center;
+
+                .images-item{
+                    width: 400px;
+                    height: 400px;
+                }
+            }
+        }
+    }
+
+    .images-main-container{
+        .menu-wrapper{
+            width: 480px;
+            padding-left: 0px;
+            justify-content: center;
+        }
+
+        .images-wrapper{
+            width: 480px;
+            justify-content: center;
+            gap: 30px;
+
+            .images-item{
+                width: 400px;
+                height: 400px;
+            }
+        }
+
+    }
 }
