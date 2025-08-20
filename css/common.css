@@ -842,6 +842,18 @@ body, html {
   opacity: 1;
   transform: translateY(0px);
 }
+.main-container .images-container > .title-wrapper .text .viewMoreBTN {
+  padding: 5px 25px;
+  color: #917b6a;
+  border: 1px solid #917b6a;
+  border-radius: 50px;
+  line-height: 50px;
+  transition: 0.3s;
+}
+.main-container .images-container > .title-wrapper .text .viewMoreBTN:hover {
+  background-color: #917b6a;
+  color: white;
+}
 .main-container .images-container > .title-wrapper .view-more {
   position: absolute;
   right: 0px;
