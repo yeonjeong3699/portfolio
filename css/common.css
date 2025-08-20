@@ -537,6 +537,21 @@ body, html {
   transform: translateY(70px);
   transition: 0.5s;
 }
+.main-container .skills-container .skill-wrapper .skill-icon {
+  display: flex;
+  gap: 50px;
+}
+.main-container .skills-container .skill-wrapper .skill-icon > li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  background-color: white;
+  border-radius: 25px;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
+}
 .main-container .skills-container .skill-wrapper.on {
   opacity: 1;
   transform: translateY(0px);
